@@ -28,4 +28,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Executar script Python em segundo plano
-      run: nohup python index.py > /dev/null   2>&1 &
+      run: nohup python index.py 
