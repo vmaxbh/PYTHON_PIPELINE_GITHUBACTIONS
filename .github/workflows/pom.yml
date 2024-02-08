@@ -1,4 +1,4 @@
-name: Executar Script Python em Segundo Plano
+name: Executar Script Python
 
 on:
   push:
@@ -27,5 +27,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Executar script Python em segundo plano
-      run: nohup python index.py 
+    - name: Executar script Python
+      run: python index.py
