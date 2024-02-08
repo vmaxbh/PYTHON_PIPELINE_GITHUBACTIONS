@@ -30,7 +30,7 @@ jobs:
     - name: Executar script Python
       run: python index.py
 
-  build_cotacao:
+  build_cotacao_Dolar:
     runs-on: ubuntu-latest
 
     steps:
