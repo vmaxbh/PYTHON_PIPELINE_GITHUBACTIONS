@@ -3,9 +3,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 import time
+import logging
+
+driver = webdriver.Chrome()
+
+
 
 def fluxoCompra_Saucedemo():
-    driver = webdriver.Chrome()
     driver.get('https://www.saucedemo.com/')
     username = driver.find_element(By.NAME, 'user-name')
     username.send_keys("standard_user")
@@ -46,9 +50,10 @@ def fluxoCompra_Saucedemo():
     time.sleep(1)
     btnLogout = driver.find_element(By.ID, 'logout_sidebar_link')
     btnLogout.click()
+    print('Etapa de compra no Site Saucedemo realizada com Sucesso!')
+    
     
 def loginCaminhoFeliz():
-    driver = webdriver.Chrome()
     driver.get('https://www.saucedemo.com/')
     username = driver.find_element(By.NAME, 'user-name')
     username.send_keys("standard_user")
@@ -63,7 +68,6 @@ def loginCaminhoFeliz():
         print("O elemento com a classe 'app_logo' não foi encontrado.")
 
 def loginUsuarioInexistente():
-    driver = webdriver.Chrome()
     driver.get('https://www.saucedemo.com/')
     username = driver.find_element(By.NAME, 'user-name')
     username.send_keys("standard_userinexistente")
@@ -83,7 +87,6 @@ def loginUsuarioInexistente():
         print("A mensagem de erro não foi encontrada.")
 
 def loginPassworInexistente():
-    driver = webdriver.Chrome()
     driver.get('https://www.saucedemo.com/')
     username = driver.find_element(By.NAME, 'user-name')
     username.send_keys("standard_user")
