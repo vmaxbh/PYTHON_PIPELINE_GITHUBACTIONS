@@ -57,7 +57,7 @@ def fluxoCompra_Saucedemo():
     time.sleep(1)
     btnLogout = driver.find_element(By.ID, 'logout_sidebar_link')
     btnLogout.click()
-    print('Etapa de compra no Site Saucedemo realizada com Sucesso!')
+    print('Cenário fluxoCompra_Saucedemo realizado com Sucesso!')
     
     
 def loginCaminhoFeliz():
@@ -70,7 +70,7 @@ def loginCaminhoFeliz():
     login_button.click()
     app_logo_elements = driver.find_elements(By.CSS_SELECTOR, ".app_logo")
     if len(app_logo_elements) >  0:
-        print("O elemento com a classe 'app_logo' foi encontrado.")
+        print("Cenário loginCaminhoFeliz realizado com Sucesso!")
     else:
         print("O elemento com a classe 'app_logo' não foi encontrado.")
 
@@ -87,7 +87,7 @@ def loginUsuarioInexistente():
     if len(error_message_elements) >  0:
         error_message = error_message_elements[0].text
         if "Epic sadface: Username and password do not match any user in this service" in error_message:
-            print("A mensagem de erro específica foi encontrada.")
+            print("Cenário loginUsuarioInexistente realizado com Sucesso!")
         else:
             print("A mensagem de erro específica não foi encontrada.")
     else:
@@ -106,7 +106,7 @@ def loginPassworInexistente():
     if len(error_message_elements) >  0:
         error_message = error_message_elements[0].text
         if "Epic sadface: Username and password do not match any user in this service" in error_message:
-            print("A mensagem de erro específica foi encontrada.")
+            print("Cenário loginPassworInexistente realizado com Sucesso!")
         else:
             print("A mensagem de erro específica não foi encontrada.")
     else:
