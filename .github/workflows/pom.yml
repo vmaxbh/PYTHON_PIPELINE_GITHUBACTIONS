@@ -29,3 +29,4 @@ jobs:
 
     - name: Executar script Python
       run: python index.py
+           python cotacao.py 
